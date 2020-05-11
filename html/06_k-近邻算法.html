@@ -1,0 +1,393 @@
+<!DOCTYPE html><html><head>
+      <title>06_k-&#x8FD1;&#x90BB;&#x7B97;&#x6CD5;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <ul>
+<li><a href="#k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95knn">K-&#x8FD1;&#x90BB;&#x7B97;&#x6CD5;&#xFF08;KNN&#xFF09;</a>
+<ul>
+<li><a href="#%E4%B8%80-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">&#x4E00;&#x3001;&#x6570;&#x636E;&#x5904;&#x7406;</a></li>
+<li><a href="#%E4%BA%8C-%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C">&#x4E8C;&#x3001;&#x9884;&#x6D4B;&#x7ED3;&#x679C;</a></li>
+<li><a href="#%E4%B8%89-%E4%BC%98%E7%BC%BA%E7%82%B9">&#x4E09;&#x3001;&#x4F18;&#x7F3A;&#x70B9; &#xFF1A;</a></li>
+</ul>
+</li>
+</ul>
+<h1 class="mume-header" id="k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95knn">K-&#x8FD1;&#x90BB;&#x7B97;&#x6CD5;&#xFF08;KNN&#xFF09;</h1>
+
+<p><strong>&#x5B9A;&#x4E49;</strong>&#xFF1A;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6837;&#x672C;&#x5728;&#x7279;&#x5F81;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;k&#x4E2A;&#x6700;&#x76F8;&#x4F3C;&#xFF08;&#x5373;&#x7279;&#x5F81;&#x7A7A;&#x95F4;&#x4E2D;&#x6700;&#x90BB;&#x8FD1;&#xFF09;&#x7684;&#x6837;&#x672C;&#x4E2D;&#x7684;&#x5927;&#x591A;&#x6570;&#x5C5E;&#x4E8E;&#x67D0;&#x4E00;&#x4E2A;&#x7C7B;&#x522B;&#xFF0C;&#x5219;&#x6837;&#x672C;&#x4E5F;&#x5C5E;&#x4E8E;&#x8FD9;&#x4E2A;&#x7C7B;&#x522B;&#x3002;<br>
+<strong>&#x6B27;&#x5F0F;&#x8DDD;&#x79BB;</strong>&#xFF1A;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#x3C1;</mi><mo>=</mo><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2212;</mo><msub><mi>x</mi><mn>1</mn></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>y</mi><mn>2</mn></msub><mo>&#x2212;</mo><msub><mi>y</mi><mn>1</mn></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">&#x3C1; = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">&#x3C1;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.24em;vertical-align:-0.30499999999999994em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.935em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-2.8950000000000005em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg width="400em" height="1.28em" viewBox="0 0 400000 1296" preserveAspectRatio="xMinYMin slice"><path d="M263,681c0.7,0,18,39.7,52,119
+c34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120
+c340,-704.7,510.7,-1060.3,512,-1067
+l0 -0
+c4.7,-7.3,11,-11,19,-11
+H40000v40H1012.3
+s-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232
+c-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1
+s-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26
+c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z
+M1001 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.30499999999999994em;"><span></span></span></span></span></span></span></span></span><br>
+&#x6CE8;&#xFF1A;KNN&#x9700;&#x8981;&#x505A;&#x6807;&#x51C6;&#x5316;&#x5904;&#x7406;</p>
+<h2 class="mume-header" id="%E4%B8%80-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">&#x4E00;&#x3001;&#x6570;&#x636E;&#x5904;&#x7406;</h2>
+
+<p>Facebook V - Predicting Check Ins &#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<br>
+<a href="https://www.kaggle.com/c/facebook-v-predicting-check-ins/data">https://www.kaggle.com/c/facebook-v-predicting-check-ins/data</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20200308011347234.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d1MzA1NTI0MDcz,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+
+<span class="token keyword">def</span> <span class="token function">load_data_facebook5</span><span class="token punctuation">(</span>test_size<span class="token operator">=</span><span class="token number">0.25</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">deal_time</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">nonlocal</span> data_all
+        <span class="token comment"># &#x5904;&#x7406;&#x65F6;&#x95F4;&#x7684;&#x6570;&#x636E;</span>
+        time_value <span class="token operator">=</span> pd<span class="token punctuation">.</span>to_datetime<span class="token punctuation">(</span>data_all<span class="token punctuation">[</span><span class="token string">&apos;time&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> unit<span class="token operator">=</span><span class="token string">&apos;s&apos;</span><span class="token punctuation">)</span>
+        <span class="token comment"># &#x65E5;&#x671F;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x5178;&#x683C;&#x5F0F;</span>
+        time_value <span class="token operator">=</span> pd<span class="token punctuation">.</span>DatetimeIndex<span class="token punctuation">(</span>time_value<span class="token punctuation">)</span>
+        <span class="token comment"># &#x6784;&#x9020;&#x4E00;&#x4E9B;&#x7279;&#x5F81;</span>
+        data_all<span class="token punctuation">[</span><span class="token string">&apos;day&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> time_value<span class="token punctuation">.</span>day
+        data_all<span class="token punctuation">[</span><span class="token string">&apos;hour&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> time_value<span class="token punctuation">.</span>hour
+        data_all<span class="token punctuation">[</span><span class="token string">&apos;minute&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> time_value<span class="token punctuation">.</span>minute
+        data_all<span class="token punctuation">[</span><span class="token string">&apos;second&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> time_value<span class="token punctuation">.</span>second
+        <span class="token comment"># &#x628A;&#x65F6;&#x95F4;&#x6233;&#x7279;&#x5F81;&#x5220;&#x9664;&#xFF0C;pandas&#xFF1A;axis=1 &#x6307;&#x5217;</span>
+        data_all<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&apos;time&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">filter_place_id</span><span class="token punctuation">(</span>min_times<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        &#x628A;&#x7B7E;&#x5230;&#x6570;&#x91CF;&#x5C11;&#x4E8E;n&#x4E2A;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x5220;&#x9664;
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">nonlocal</span> data_all
+         <span class="token comment"># &#x7EDF;&#x8BA1;&#x7B7E;&#x5230;&#x6B21;&#x6570;</span>
+        place_count <span class="token operator">=</span> data_all<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">&apos;place_id&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># &#x7B5B;&#x6389;&#x6B21;&#x6570;&#x5C0F;&#x4E8E;3&#x7684;</span>
+        after_count_data <span class="token operator">=</span> place_count<span class="token punctuation">[</span>place_count<span class="token punctuation">.</span>row_id <span class="token operator">&gt;</span> min_times<span class="token punctuation">]</span>
+        <span class="token comment"># &#x5C06;&#x7D22;&#x5F15;place_id&#x4FDD;&#x5B58;&#x4E3A;&#x5B57;&#x6BB5;</span>
+        after_count_data <span class="token operator">=</span> after_count_data<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        data_all <span class="token operator">=</span> data_all<span class="token punctuation">[</span>data_all<span class="token punctuation">[</span><span class="token string">&apos;place_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isin<span class="token punctuation">(</span>after_count_data<span class="token punctuation">.</span>place_id<span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">standard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        &#x7279;&#x5F81;&#x5DE5;&#x7A0B;&#xFF08;&#x6807;&#x51C6;&#x5316;&#xFF09;
+        :return:
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> StandardScaler
+        <span class="token keyword">nonlocal</span> data_x<span class="token punctuation">,</span> data_y
+        <span class="token comment"># &#x8FDB;&#x884C;&#x7279;&#x5F81;&#x5DE5;&#x7A0B;&#xFF08;&#x6807;&#x51C6;&#x5316;&#xFF09;</span>
+        std <span class="token operator">=</span> StandardScaler<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        data_x <span class="token operator">=</span> std<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>data_x<span class="token punctuation">)</span>
+
+    
+    data_all <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>__dir__ <span class="token operator">+</span> <span class="token string">&apos;facebook5/sample.csv&apos;</span><span class="token punctuation">)</span>
+    deal_time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    filter_place_id<span class="token punctuation">(</span>min_times<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+    data_x<span class="token punctuation">,</span> data_y <span class="token operator">=</span> data_all<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&apos;place_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> data_all<span class="token punctuation">[</span><span class="token string">&apos;place_id&apos;</span><span class="token punctuation">]</span>
+    standard<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># print(data_x, data_y)</span>
+
+    <span class="token comment"># &#x8FDB;&#x884C;&#x6570;&#x636E;&#x5206;&#x5272;</span>
+    <span class="token keyword">return</span> train_test_split<span class="token punctuation">(</span>data_x<span class="token punctuation">,</span> data_y<span class="token punctuation">,</span> test_size<span class="token operator">=</span>test_size<span class="token punctuation">)</span>
+</pre><p>&#x6570;&#x636E;&#x5904;&#x7406;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x7F29;&#x5C0F;&#x6570;&#x636E;&#x96C6;&#x8303;&#x56F4;</span>
+DataFrame<span class="token punctuation">.</span>query<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># &#x5220;&#x9664;&#x6CA1;&#x7528;&#x7684;&#x65E5;&#x671F;&#x6570;&#x636E;</span>
+DataFrame<span class="token punctuation">.</span>drop
+<span class="token comment"># &#x5C06;&#x7B7E;&#x5230;&#x4F4D;&#x7F6E;&#x5C11;&#x4E8E;n&#x4E2A;&#x7528;&#x6237;&#x7684;&#x5220;&#x9664;</span>
+place_count <span class="token operator">=</span> data_all<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">&apos;place_id&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token punctuation">)</span>
+tf <span class="token operator">=</span> place_count<span class="token punctuation">[</span>place_count<span class="token punctuation">.</span>row_id <span class="token operator">&gt;</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span><span class="token punctuation">)</span>
+data <span class="token operator">=</span> data<span class="token punctuation">[</span>data<span class="token punctuation">[</span><span class="token string">&apos;place_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isin<span class="token punctuation">(</span>tf<span class="token punctuation">.</span>place_id<span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+</pre><h2 class="mume-header" id="%E4%BA%8C-%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C">&#x4E8C;&#x3001;&#x9884;&#x6D4B;&#x7ED3;&#x679C;</h2>
+
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">from</span> datasets <span class="token keyword">import</span> load_data_facebook5
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>neighbors <span class="token keyword">import</span> KNeighborsClassifier
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+    X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> Y_train<span class="token punctuation">,</span> Y_test <span class="token operator">=</span> load_data_facebook5<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x8FDB;&#x884C;&#x7B97;&#x6CD5;&#x6D41;&#x7A0B;&#xFF0C;&#x8D85;&#x53C2;&#x6570;</span>
+    knn <span class="token operator">=</span> KNeighborsClassifier<span class="token punctuation">(</span>n_neighbors<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+    <span class="token comment"># fit predict score</span>
+    knn<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> Y_train<span class="token punctuation">)</span>
+    <span class="token comment"># &#x5F97;&#x51FA;&#x9884;&#x6D4B;&#x7ED3;&#x679C;</span>
+    Y_predict <span class="token operator">=</span> knn<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x9884;&#x6D4B;&#x503C;&quot;</span><span class="token punctuation">,</span> Y_predict<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x51C6;&#x786E;&#x7387;&quot;</span><span class="token punctuation">,</span> knn<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X_test<span class="token punctuation">,</span> Y_test<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="%E4%B8%89-%E4%BC%98%E7%BC%BA%E7%82%B9">&#x4E09;&#x3001;&#x4F18;&#x7F3A;&#x70B9; &#xFF1A;</h2>
+
+<ul>
+<li><strong>&#x4F18;</strong>&#xFF1A;&#x7B80;&#x5355;&#xFF0C;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#xFF0C;&#x6613;&#x4E8E;&#x5B9E;&#x73B0;&#xFF0C;&#x65E0;&#x9700;&#x4F30;&#x8BA1;&#x53C2;&#x6570;&#xFF0C;&#x65E0;&#x9700;&#x8BAD;&#x7EC3;</li>
+<li><strong>&#x7F3A;</strong>&#xFF1A;&#x61D2;&#x60F0;&#x7B97;&#x6CD5;&#xFF0C;&#x5BF9;&#x6D4B;&#x8BD5;&#x6837;&#x672C;&#x5206;&#x7C7B;&#x65F6;&#x7684;&#x8BA1;&#x7B97;&#x91CF;&#x5927;&#xFF0C;&#x5185;&#x5B58;&#x5F00;&#x9500;&#x5927;&#xFF1B;&#x5FC5;&#x987B;&#x6307;&#x5B9A;k&#x503C;&#xFF0C;k&#x503C;&#x9009;&#x62E9;&#x4E0D;&#x5F53;&#x5219;&#x5206;&#x7C7B;&#x7CBE;&#x5EA6;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x3002;&#xFF08;k&#x503C;&#x53D6;&#x5C0F;&#xFF1A;&#x5BB9;&#x6613;&#x53D7;&#x5F02;&#x5E38;&#x70B9;&#x5F71;&#x54CD;&#xFF1B;k&#x503C;&#x53D6;&#x5F88;&#x5927;&#xFF1A;&#x5BB9;&#x6613;&#x53D7;k&#x503C;&#x6570;&#x91CF;[&#x7C7B;&#x522B;]&#x6CE2;&#x52A8;&#xFF09;</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
